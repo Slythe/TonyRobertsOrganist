@@ -1,31 +1,30 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Organist Tony Roberts - Professional Organ & Piano player";    
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h2>Discography</h2>
+            <p>
+                Aliquam fermentum faucibus felis quis blandit. Proin vel faucibus arcu. Etiam quis odio tellus. Phasellus dolor est, mattis a luctus et, cursus eget magna. Nullam lobortis elit aliquam nunc tristique ornare. Morbi congue hendrerit dui eget tempor.
+            </p>
+            <p><a class="btn btn-default" href="#">See Collection &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+            <h2>Concert Diary</h2>
+            <p>
+                <i><strong>Next Concert: </strong> @DateTime.Now.AddDays(7).ToString("dd/MM/yy") @@ The Keep Moat Stadium</i>
+            </p>
+            <p>Quisque eget massa sit amet erat dictum feugiat sit amet et elit. Duis eu lorem consectetur, feugiat eros a, faucibus dui. Proin tristique faucibus nulla non blandit. Aenean pharetra luctus mauris.</p>
+            <p><a class="btn btn-default" href="#">See Dates &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+            <h2>Gallery</h2>
+            <p>Ut elementum feugiat massa et accumsan. Praesent tempor ornare nunc non ullamcorper. Ut varius, mi et feugiat rhoncus, leo lacus feugiat tellus, ac aliquet neque dolor eu mi.</p>
+            <p><a class="btn btn-default" href="#">View Gallery &raquo;</a></p>
+        </div>
     </div>
 </div>
