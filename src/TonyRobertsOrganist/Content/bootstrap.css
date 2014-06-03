@@ -4950,6 +4950,9 @@ a.list-group-item.active > .badge,
 }
 .wide
 {
+    position:absolute;
+    left:0;
+    right:0;
     width:100%;
     height:350px;
     background-image: url('/Assets/img/pianokeys.jpg');
@@ -4957,6 +4960,10 @@ a.list-group-item.active > .badge,
 }
 .wide img {
     width:100%;
+}
+
+.tall{
+    height:350px;
 }
 
 .jumbotron h1 {
