@@ -27,8 +27,27 @@
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Concert Diary", "Diary", "Schedule")</li>
                     <li>@Html.ActionLink("Music", "Albums", "Music")</li>
+                    <li class="dropdown">
+                        <a class="dropdown" data-toggle="dropdown" href="#">
+                            Services
+                            <i class="caret"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#">Tuition</a>
+                            </li>
+                            <li>
+                                <a href="#">Care Homes</a>
+                            </li>
+                            <li>
+                                <a href="#">Personal Requests</a>
+                            </li>
+                        </ul>
+                    </li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+
                 </ul>
+
             </div>
         </div>
     </div>
