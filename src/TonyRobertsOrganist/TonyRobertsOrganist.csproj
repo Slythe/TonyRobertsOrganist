@@ -171,9 +171,33 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\audio\Somewhere_In_Time.mp3" />
     <Content Include="Assets\img\pianokeys.jpg" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\mediaplayerjs\background.png" />
+    <Content Include="Content\mediaplayerjs\bigplay.png" />
+    <Content Include="Content\mediaplayerjs\bigplay.svg" />
+    <Content Include="Content\mediaplayerjs\controls-ted.png" />
+    <Content Include="Content\mediaplayerjs\controls-wmp-bg.png" />
+    <Content Include="Content\mediaplayerjs\controls-wmp.png" />
+    <Content Include="Content\mediaplayerjs\controls.png" />
+    <Content Include="Content\mediaplayerjs\controls.svg" />
+    <Content Include="Content\mediaplayerjs\DO NOT CHANGE THESE FILES. USE -src- FOLDER.txt" />
+    <Content Include="Content\mediaplayerjs\flashmediaelement-cdn.swf" />
+    <Content Include="Content\mediaplayerjs\flashmediaelement.swf" />
+    <Content Include="Content\mediaplayerjs\jquery.js" />
+    <Content Include="Content\mediaplayerjs\loading.gif" />
+    <Content Include="Content\mediaplayerjs\mediaelement-and-player.js" />
+    <Content Include="Content\mediaplayerjs\mediaelement-and-player.min.js" />
+    <Content Include="Content\mediaplayerjs\mediaelement.js" />
+    <Content Include="Content\mediaplayerjs\mediaelement.min.js" />
+    <Content Include="Content\mediaplayerjs\mediaelementplayer.css" />
+    <Content Include="Content\mediaplayerjs\mediaelementplayer.js" />
+    <Content Include="Content\mediaplayerjs\mediaelementplayer.min.css" />
+    <Content Include="Content\mediaplayerjs\mediaelementplayer.min.js" />
+    <Content Include="Content\mediaplayerjs\mejs-skins.css" />
+    <Content Include="Content\mediaplayerjs\silverlightmediaelement.xap" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -188,6 +212,7 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\mediaelement-and-player.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />

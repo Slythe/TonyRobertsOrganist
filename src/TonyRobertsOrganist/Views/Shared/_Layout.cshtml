@@ -6,8 +6,21 @@
     <title>@ViewBag.Title</title>
     <link href="/Content/bootstrap.css" rel="stylesheet" />
     <link href="/Content/site.css" rel="stylesheet" />
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Content/mediaplayerjs/mediaelement-and-player.min.js"></script>
+    <link rel="stylesheet" href="~/Content/mediaplayerjs/mediaelementplayer.min.css" />
+
     @*@Styles.Render("~/Content/css")*@
-    @Scripts.Render("~/bundles/modernizr")
+    @*@Scripts.Render("~/bundles/modernizr")*@
+
+    
+    <script>
+        $(document).ready(function () {
+            $('audio,video').mediaelementplayer();
+        });
+    </script>
+
 
 </head>
 <body>
@@ -56,6 +69,7 @@
     <div class="container body-content">
         @RenderBody()
         <hr />
+
         <footer>
             <p>&copy; @DateTime.Now.Year - Tony Roberts, Professional Organ and Piano player</p>
         </footer>
