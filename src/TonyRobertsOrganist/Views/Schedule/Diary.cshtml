@@ -1,4 +1,7 @@
-﻿
+﻿@using TonyRobertsOrganist.Core.Models
+
+@model TonyRobertsOrganist.Core.Models.DiaryModel
+
 @{
     ViewBag.Title = "Diary";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -8,4 +11,23 @@
 
 <h3>Upcoming Shows</h3>
 
-<p>Here would be displayed a list of shows and events</p>
+<table>
+
+    <tr>
+        <th><p>Date</p></th>
+        <th></th>
+        <th><p>Start Time</p></th>
+        <th></th>
+        <th><p>End Time</p></th>
+        <th></th>
+        <th><p>Location</p></th>
+        <th></th>
+        <th><p>Additional Information</p></th>
+    </tr>
+
+    @foreach (DiaryEvent dEvent in Model.DiaryEvents)
+    {
+        @Html.Partial("PartialDiaryItem", dEvent);
+    }
+
+</table>

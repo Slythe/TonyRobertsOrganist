@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using TonyRobertsOrganist.Core.Models;
+using TonyRobertsOrganist.Core.Schedule;
+
+
 
 namespace TonyRobertsOrganist.Controllers
 {
@@ -16,7 +20,10 @@ namespace TonyRobertsOrganist.Controllers
 
         public ActionResult Diary()
         {
-            return View();
+
+            DiaryModel theDiary = ScheduleManager.GetDiaryInformation();
+            
+            return View(theDiary);
         }
 
     }

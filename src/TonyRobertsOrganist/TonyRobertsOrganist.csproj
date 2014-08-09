@@ -162,6 +162,12 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MusicController.cs" />
     <Compile Include="Controllers\ScheduleController.cs" />
+    <Compile Include="Core\Infrastructure\CoreFactory.cs" />
+    <Compile Include="Core\Models\DiaryEvent.cs" />
+    <Compile Include="Core\Models\DiaryModel.cs" />
+    <Compile Include="Core\Repositories\Abstract\IDiaryRepository.cs" />
+    <Compile Include="Core\Repositories\Concrete\Dummy\DummyDiaryRepository.cs" />
+    <Compile Include="Core\Schedule\ScheduleManager.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -212,7 +218,6 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\mediaelement-and-player.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
@@ -249,9 +254,11 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Schedule\Diary.cshtml" />
     <Content Include="Views\Music\Albums.cshtml" />
+    <Content Include="Views\Schedule\PartialDiaryItem.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Core\Repositories\Concrete\CSV\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
