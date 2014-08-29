@@ -21,17 +21,19 @@
         <div class="col-md-4">
             <h2>Discography</h2>
             <p>
-                Aliquam fermentum faucibus felis quis blandit. Proin vel faucibus arcu. Etiam quis odio tellus. Phasellus dolor est, mattis a luctus et, cursus eget magna. Nullam lobortis elit aliquam nunc tristique ornare. Morbi congue hendrerit dui eget tempor.
+                Tonys' debut album [[[TODO: Album name]]] has now been released, and is available to sample and purchase from the @Html.ActionLink("Discography", "Albums", "Music") section of the website along with all his other materials.
             </p>
-            <p><a class="btn btn-default" href="#">See Collection &raquo;</a></p>
+            <p><a class="btn btn-default" href="@Url.Action("Albums", "Music")">See Collection &raquo;</a></p>
         </div>
         <div class="col-md-4">
             <h2>Concert Diary</h2>
             <p>
-                <i><strong>Next Concert: </strong> @DateTime.Now.AddDays(7).ToString("dd/MM/yy") @@ The Keep Moat Stadium</i>
+                <i><strong>Next Concert: </strong> [[[TODO: Auto get next concert date]]]</i>
             </p>
-            <p>Quisque eget massa sit amet erat dictum feugiat sit amet et elit. Duis eu lorem consectetur, feugiat eros a, faucibus dui. Proin tristique faucibus nulla non blandit. Aenean pharetra luctus mauris.</p>
-            <p><a class="btn btn-default" href="#">See Dates &raquo;</a></p>
+            <p>
+                To see when Tony is next performing near you, check out his @Html.ActionLink("Concert Diary", "Diary", "Schedule")
+            </p>
+            <p><a class="btn btn-default" href="@Url.Action("Diary", "Schedule")">See Dates &raquo;</a></p>
         </div>
         <div class="col-md-4">
             <h2>Gallery</h2>

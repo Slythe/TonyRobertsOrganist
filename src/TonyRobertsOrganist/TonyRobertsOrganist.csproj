@@ -162,6 +162,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MusicController.cs" />
     <Compile Include="Controllers\ScheduleController.cs" />
+    <Compile Include="Controllers\ServicesController.cs" />
     <Compile Include="Core\Infrastructure\CoreFactory.cs" />
     <Compile Include="Core\Models\DiaryEvent.cs" />
     <Compile Include="Core\Models\DiaryModel.cs" />
@@ -210,6 +211,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Properties\PublishProfiles\ToFile.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -255,6 +257,9 @@
     <Content Include="Views\Schedule\Diary.cshtml" />
     <Content Include="Views\Music\Albums.cshtml" />
     <Content Include="Views\Schedule\PartialDiaryItem.cshtml" />
+    <Content Include="Views\Services\Tuition.cshtml" />
+    <Content Include="Views\Services\PersonalRequests.cshtml" />
+    <Content Include="Views\Services\CareHomes.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
