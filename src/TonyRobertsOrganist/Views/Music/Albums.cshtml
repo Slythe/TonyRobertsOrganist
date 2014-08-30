@@ -4,88 +4,122 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<script type="text/javascript">
+
+    
+    function setPlayerTrack(trackName, trackNumber) {
+
+        var stopLink = document.getElementById('tck_' + trackNumber);
+        stopLink.setAttribute('style', 'display:inline;');
+
+
+        var player = new MediaElementPlayer('#player', {alwaysShowControls: true});
+        player.pause();
+        
+        var playerEl = document.getElementById('player');
+        playerEl.setAttribute('src', '/assets/audio/' + trackName);
+                
+
+        player.play();
+
+                        
+    }
+
+    function stopPlayer(trackNumber) {
+
+        var player = new MediaElementPlayer('#player', { alwaysShowControls: true });
+        player.pause();
+
+        var stopLink = document.getElementById('tck_' + trackNumber);
+        stopLink.setAttribute('style', 'display:none;');
+
+    }
+
+
+
+
+</script>
+
+
 
 <h2>Discography</h2>
 <p>Please find my current discography, all of which are available to buy as a digital download or physical CD.</p>
 
-<audio id="player" src="~/Assets/audio/Somewhere_In_Time.mp3" type="audio/mp3" controls="controls"></audio>
 
 
-<h3>[[[TODO: Album Name]]] (2014)</h3>
-<p><strong><i>[[[TODO: Album Name]]]</i></strong> is the debut studio album by Organist Tony Robers, released [[[TODO: Release Date]]] recorded live at Innovation Recording Studios.</p>
+
+<h3>Tony Roberts Live (2014)</h3>
+<p><strong><i>Tony Roberts Live</i></strong> is the debut studio album by Organist Tony Robers, released 2014 recorded live at Innovation Recording Studios.</p>
 <p>
-    <strong>Track listing</strong> (<i>click for a 30 second sample</i>);
+    <strong>Track listing</strong> (<i>click to hear a 30 second sample</i>);
 </p>
 
 <ol>
     <li>
         <p>
-            Somewhere In Time/I Have a Dream
+            <a onclick="setPlayerTrack('01_Somewhere_In_Time_30s.mp3', 1);">Somewhere In Time/I Have a Dream</a><span id="tck_1" style="display:none;"><i>&nbsp;<a onclick="stopPlayer(1);">[x] stop</a></i></span>
         </p>
     </li>
     <li>
         <p>
-            All I Ask of You/Amigos Para Slampre
+            <a onclick="setPlayerTrack('02_All_I_Ask_Of_You_30s.mp3', 2);">All I Ask of You/Amigos Para Siempre</a><span id="tck_2" style="display:none;"><i>&nbsp;<a onclick="stopPlayer(2);">[x] stop</a></i></span>
         </p>
     </li>
     <li>
         <p>
-            Water Mark/The Sweatheart Tree
-        </p>
+            <a onclick="setPlayerTrack('03_Watermark.mp3', 3);">Water Mark/The Sweatheart Tree</a><span id="tck_3" style="display:none;"><i>&nbsp;<a onclick="stopPlayer(3);">[x] stop</a></i></span>
+</p>
     </li>
     <li>
         <p>
-            Let Me Call You Sweatheart/When i Grow to Old to Dream
-        </p>
+            <a onclick="setPlayerTrack('04_LetMeCallYouSweetheart.mp3', 4);">Let Me Call You Sweatheart/When i Grow to Old to Dream</a><span id="tck_4" style="display:none;"><i>&nbsp;<a onclick="stopPlayer(4);">[x] stop</a></i></span>
+</p>
     </li>
     <li>
         <p>
-            La Golondrina/O Sole Mio
-        </p>
+            <a onclick="setPlayerTrack('05_LaGolondrina.mp3', 5);">La Golondrina/O Sole Mio</a><span id="tck_5" style="display:none;"><i>&nbsp;<a onclick="stopPlayer(5);">[x] stop</a></i></span>
+</p>
     </li>
     <li>
         <p>
-            Habanera/Born Free
-        </p>
+            <a onclick="setPlayerTrack('06_Habanera.mp3', 6);">Habanera/Exodus Song</a><span id="tck_6" style="display:none;"><i>&nbsp;<a onclick="stopPlayer(6);">[x] stop</a></i></span>
+</p>
     </li>
     <li>
         <p>
-            Almost Like Being in Love/One of Those Songs/Midnight In Moscow
-        </p>
+            <a onclick="setPlayerTrack('07_AlmostLikeBeingInLove.mp3', 7);">Almost Like Being in Love/One of Those Songs/Midnight In Moscow</a><span id="tck_7" style="display:none;"><i>&nbsp;<a onclick="stopPlayer(7);">[x] stop</a></i></span>
+</p>
     </li>
     <li>
         <p>
-            Cheek to Cheek/Puttin on the Ritz/Your Just in Love
-        </p>
+            <a onclick="setPlayerTrack('08_CheekToCheek.mp3', 8);">Cheek to Cheek/Puttin on the Ritz/You're Just in Love</a><span id="tck_8" style="display:none;"><i>&nbsp;<a onclick="stopPlayer(8);">[x] stop</a></i></span>
+</p>
     </li>
     <li>
         <p>
-            I Do I Do I Do/I Fall to Pieces
-        </p>
+            <a onclick="setPlayerTrack('09_IDoIDoIDo.mp3', 9);">I Do I Do I Do/I Fall to Pieces</a><span id="tck_9" style="display:none;"><i>&nbsp;<a onclick="stopPlayer(9);">[x] stop</a></i></span>
+</p>
     </li>
     <li>
         <p>
-            Dancin in the Dark/Till There Was You
-        </p>
+            <a onclick="setPlayerTrack('10_DancingInTheDark.mp3', 10);">Dancin in the Dark/Till There Was You</a><span id="tck_10" style="display:none;"><i>&nbsp;<a onclick="stopPlayer(10);">[x] stop</a></i></span>
+</p>
     </li>
     <li>
         <p>
-            [[[TODO: Finish Track listing]]]
-        </p>
+            <a onclick="setPlayerTrack('11_IslandInTheSun.mp3', 11);">Island In The Sun/Love Letters In The Sand</a><span id="tck_11" style="display:none;"><i>&nbsp;<a onclick="stopPlayer(11);">[x] stop</a></i></span>
+</p>
     </li>
     <li>
         <p>
-            Almost Like Being in Love/One of Those Songs/Midnight In Moscow
-        </p>
+            <a onclick="setPlayerTrack('12_FromRussiaWithLove.mp3', 12);">From Russia With Love/You Only Live Twice</a><span id="tck_12" style="display:none;"><i>&nbsp;<a onclick="stopPlayer(12);">[x] stop</a></i></span>
+</p>
     </li>
-    <li>
-        <p>
-            Almost Like Being in Love/One of Those Songs/Midnight In Moscow
-        </p>
-    </li>
-    <li>lalasd</li>
 </ol>
 
-<h3>Enter the Wu-Tang (36 Chambers) (1993)</h3>
-<p>Released November 9, 1993, on Loud Records and distributed through RCA Records. Recording sessions for the album <strong><i>Enter the Wu-Tang (36 Chambers)</i></strong> took place during 1992 to 1993 at Firehouse Studio in New York City.</p>
-<p>Then imagine here an album sleeve image and track listing, and maybe an itunes style album sample.</p>
+
+<div style="display:none;">
+
+    <audio id="player" src="" type="audio/mp3" controls="controls"></audio>
+
+</div>
