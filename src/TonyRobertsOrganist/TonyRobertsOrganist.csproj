@@ -178,7 +178,20 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\audio\01_Somewhere_In_Time_30s.mp3" />
+    <Content Include="Assets\audio\02_All_I_Ask_Of_You_30s.mp3" />
+    <Content Include="Assets\audio\03_Watermark.mp3" />
+    <Content Include="Assets\audio\04_LetMeCallYouSweetheart.mp3" />
+    <Content Include="Assets\audio\05_LaGolondrina.mp3" />
+    <Content Include="Assets\audio\06_Habanera.mp3" />
+    <Content Include="Assets\audio\07_AlmostLikeBeingInLove.mp3" />
+    <Content Include="Assets\audio\08_CheekToCheek.mp3" />
+    <Content Include="Assets\audio\09_IDoIDoIDo.mp3" />
+    <Content Include="Assets\audio\10_DancingInTheDark.mp3" />
+    <Content Include="Assets\audio\11_IslandInTheSun.mp3" />
+    <Content Include="Assets\audio\12_FromRussiaWithLove.mp3" />
     <Content Include="Assets\img\pianokeys.jpg" />
+    <Content Include="Assets\img\trl_front.jpg" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\mediaplayerjs\background.png" />
@@ -262,7 +275,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Assets\audio\" />
     <Folder Include="Core\Repositories\Concrete\CSV\" />
   </ItemGroup>
   <ItemGroup>
