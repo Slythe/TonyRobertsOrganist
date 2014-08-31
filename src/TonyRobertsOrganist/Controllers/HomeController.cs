@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using TonyRobertsOrganist.Core.Models;
+using TonyRobertsOrganist.Core.Schedule;
+
+
 
 namespace TonyRobertsOrganist.Controllers
 {
@@ -10,7 +14,11 @@ namespace TonyRobertsOrganist.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+
+            DiaryEvent nextEvent = ScheduleManager.GetNextEvent();
+
+            return View("Index", nextEvent);
+
         }
 
         public ActionResult About()

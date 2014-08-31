@@ -1,0 +1,74 @@
+﻿@using TonyRobertsOrganist.Core.Models.Manage
+
+@model TonyRobertsOrganist.Core.Models.Manage.ManageImportResultModel
+
+
+@{
+    ViewBag.Title = "DiaryUpload";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Diary Upload</h2>
+
+@if (Model == null)
+{
+
+    
+    <form action="" method="post" enctype="multipart/form-data">
+
+        <div>
+
+            <h3>Select File</h3>
+
+            <p>
+                Please select the <i>.xlsx</i> file containing the events schedule using the form below;<br />&nbsp;
+            </p>
+
+            <p>
+                <input type="file" name="file" id="file" />
+                <br />
+                <input type="submit" value="Upload" />
+            </p>
+
+
+        </div>
+
+    </form>
+
+    
+}
+else
+{
+
+    if (Model.ImportCompleted)
+    {
+
+        <h2>Success!</h2>
+    
+        <p>All diary events have been imported</p>
+
+    }
+    else
+    {
+        
+        <h2>Something Went Wrong...</h2>
+    
+        <p>The import failed, the details we have are below;</p>
+    
+        <p>
+            <i>@Model.ErrorMessage</i>
+        </p> 
+        
+    }
+    
+}
+
+
+
+<div>
+
+
+
+</div>
+
+

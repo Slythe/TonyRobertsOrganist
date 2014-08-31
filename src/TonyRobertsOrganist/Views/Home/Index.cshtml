@@ -1,4 +1,8 @@
-﻿@{
+﻿@using TonyRobertsOrganist.Core.Models
+
+@model TonyRobertsOrganist.Core.Models.DiaryEvent
+
+@{
     ViewBag.Title = "Organist Tony Roberts - Professional Organ & Piano player";    
 }
 
@@ -21,24 +25,32 @@
         <div class="col-md-4">
             <h2>Discography</h2>
             <p>
-                Tonys' debut album [[[TODO: Album name]]] has now been released, and is available to sample and purchase from the @Html.ActionLink("Discography", "Albums", "Music") section of the website along with all his other materials.
+                Tonys' debut album <strong><i>Tony Roberts Live</i></strong> has now been released, and is available to sample and purchase from the @Html.ActionLink("Discography", "Albums", "Music") section of the website along with all his other materials.
             </p>
             <p><a class="btn btn-default" href="@Url.Action("Albums", "Music")">See Collection &raquo;</a></p>
         </div>
         <div class="col-md-4">
             <h2>Concert Diary</h2>
             <p>
-                <i><strong>Next Concert: </strong> [[[TODO: Auto get next concert date]]]</i>
+                <i><strong>Next Concert: </strong>
+                
+                @if (Model != null)
+                {
+                    
+                    @Model.EventDate@: @@ @Model.Location
+                    
+                }
+                </i>
             </p>
             <p>
                 To see when Tony is next performing near you, check out his @Html.ActionLink("Concert Diary", "Diary", "Schedule")
             </p>
             <p><a class="btn btn-default" href="@Url.Action("Diary", "Schedule")">See Dates &raquo;</a></p>
         </div>
-        <div class="col-md-4">
+        @*<div class="col-md-4">
             <h2>Gallery</h2>
             <p>Ut elementum feugiat massa et accumsan. Praesent tempor ornare nunc non ullamcorper. Ut varius, mi et feugiat rhoncus, leo lacus feugiat tellus, ac aliquet neque dolor eu mi.</p>
             <p><a class="btn btn-default" href="#">View Gallery &raquo;</a></p>
-        </div>
+        </div>*@
     </div>
 </div>

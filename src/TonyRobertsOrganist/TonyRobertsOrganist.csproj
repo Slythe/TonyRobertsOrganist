@@ -40,6 +40,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="StructuredFileReaders.Core">
+      <HintPath>..\..\lib\StructuredFileReader\StructuredFileReaders.Core.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -160,14 +163,17 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MusicController.cs" />
     <Compile Include="Controllers\ScheduleController.cs" />
     <Compile Include="Controllers\ServicesController.cs" />
     <Compile Include="Core\Infrastructure\CoreFactory.cs" />
     <Compile Include="Core\Models\DiaryEvent.cs" />
     <Compile Include="Core\Models\DiaryModel.cs" />
+    <Compile Include="Core\Models\Manage\ManageImportResultModel.cs" />
     <Compile Include="Core\Repositories\Abstract\IDiaryRepository.cs" />
     <Compile Include="Core\Repositories\Concrete\Dummy\DummyDiaryRepository.cs" />
+    <Compile Include="Core\Repositories\Concrete\SQLServer\SQLServerDiaryRepository.cs" />
     <Compile Include="Core\Schedule\ScheduleManager.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -223,6 +229,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="ConfigFiles\ConnectionStrings.config" />
     <None Include="Properties\PublishProfiles\ToFile.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -272,9 +279,10 @@
     <Content Include="Views\Services\Tuition.cshtml" />
     <Content Include="Views\Services\PersonalRequests.cshtml" />
     <Content Include="Views\Services\CareHomes.cshtml" />
+    <Content Include="Views\Manage\DiaryUpload.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
+    <Folder Include="App_Data\uploads\" />
     <Folder Include="Core\Repositories\Concrete\CSV\" />
   </ItemGroup>
   <ItemGroup>

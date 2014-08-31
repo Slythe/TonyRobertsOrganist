@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -18,13 +19,26 @@ namespace TonyRobertsOrganist.Core.Schedule
         public static DiaryModel GetDiaryInformation()
         {
 
-            DiaryModel UpcomingShows = Repositories.Concrete.Dummy.DummyDiaryRepository.GetUpcomingEvents(DateTime.Now);
-
-            return UpcomingShows;
-
+            return Repositories.Concrete.SQLServer.SQLServerDiaryRepository.GetUpcomingEvents(DateTime.Now);
 
         }
 
+
+        public static bool ImportEventsSchedule(DataSet eventsSchedule)
+        {
+
+            return Repositories.Concrete.SQLServer.SQLServerDiaryRepository.ImportDiaryEvents(eventsSchedule);
+
+        }
+
+
+        public static DiaryEvent GetNextEvent()
+        {
+
+            return Repositories.Concrete.SQLServer.SQLServerDiaryRepository.GetNextEvent();
+
+        }
+        
 
     }
 }
