@@ -164,6 +164,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MediaController.cs" />
     <Compile Include="Controllers\MusicController.cs" />
     <Compile Include="Controllers\ScheduleController.cs" />
     <Compile Include="Controllers\ServicesController.cs" />
@@ -196,10 +197,15 @@
     <Content Include="Assets\audio\10_DancingInTheDark.mp3" />
     <Content Include="Assets\audio\11_IslandInTheSun.mp3" />
     <Content Include="Assets\audio\12_FromRussiaWithLove.mp3" />
+    <Content Include="Assets\gallery\grly01.jpg" />
+    <Content Include="Assets\gallery\grly02.jpg" />
+    <Content Include="Assets\gallery\grly03.jpg" />
     <Content Include="Assets\img\pianokeys.jpg" />
     <Content Include="Assets\img\trl_front.jpg" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\ideal-image-slider-default-theme.css" />
+    <Content Include="Content\ideal-image-slider.css" />
     <Content Include="Content\mediaplayerjs\background.png" />
     <Content Include="Content\mediaplayerjs\bigplay.png" />
     <Content Include="Content\mediaplayerjs\bigplay.svg" />
@@ -232,6 +238,7 @@
     <Content Include="ConfigFiles\ConnectionStrings.config" />
     <None Include="Properties\PublishProfiles\ToFile.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\ideal-image-slider.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -280,6 +287,7 @@
     <Content Include="Views\Services\PersonalRequests.cshtml" />
     <Content Include="Views\Services\CareHomes.cshtml" />
     <Content Include="Views\Manage\DiaryUpload.cshtml" />
+    <Content Include="Views\Media\Gallery.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\uploads\" />
