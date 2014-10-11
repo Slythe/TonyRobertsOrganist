@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using TonyRobertsOrganist.Core.Models;
 using TonyRobertsOrganist.Core.Schedule;
-
+using System.Configuration;
 
 
 namespace TonyRobertsOrganist.Controllers
@@ -14,7 +14,7 @@ namespace TonyRobertsOrganist.Controllers
     {
         public ActionResult Index()
         {
-
+            
             DiaryEvent nextEvent = ScheduleManager.GetNextEvent();
 
             return View("Index", nextEvent);
