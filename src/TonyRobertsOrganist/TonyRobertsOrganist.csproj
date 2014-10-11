@@ -238,6 +238,12 @@
     <Content Include="ConfigFiles\ConnectionStrings.config">
       <TransformOnBuild>true</TransformOnBuild>
     </Content>
+    <Content Include="ConfigFiles\AppSettings.Release.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ConfigFiles\AppSettings.Dev.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="ConfigFiles\ConnectionStrings.Debug.config">
       <DependentUpon>ConnectionStrings.config</DependentUpon>
       <IsTransformFile>True</IsTransformFile>
