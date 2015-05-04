@@ -5,29 +5,59 @@
 @{
     ViewBag.Title = "Diary";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    int loopCount = 0;
 }
 
 <h2>Concert Diary</h2>
 
 <h3>Upcoming Shows</h3>
 
-<table>
+<p>
+    &nbsp;
+</p>
 
+<table class="pure-table">
+
+    <thead>
     <tr>
-        <th><p>Date</p></th>
-        <th></th>
-        <th><p>Start Time</p></th>
-        <th></th>
-        <th><p>End Time</p></th>
-        <th></th>
-        <th><p>Location</p></th>
-        <th></th>
-        <th><p>Additional Information</p></th>
+        <th>
+            <p>Date</p>
+        </th>
+        <th>
+            <p>Location</p>
+        </th>
     </tr>
+    </thead>
+
 
     @foreach (DiaryEvent dEvent in Model.DiaryEvents)
     {
-        @Html.Partial("PartialDiaryItem", dEvent);
+
+
+
+        if (loopCount%2 == 0)
+        {
+
+            @:<tr class="pure-table-even">
+
+                @Html.Partial("PartialDiaryItem", dEvent);
+
+            @:</tr> 
+
+        }
+        else
+        {
+
+            @:<tr class="pure-table-odd">
+            
+                @Html.Partial("PartialDiaryItem", dEvent);
+
+            @:</tr> 
+              
+        }
+
+        loopCount += 1;
+
     }
 
 </table>

@@ -41,13 +41,13 @@ namespace TonyRobertsOrganist.Core.Repositories.Concrete.SQLServer
                         prmDate.Value = dr["Date"];
 
                         SqlParameter prmStartTime = command.Parameters.Add("@StartTime", SqlDbType.DateTime);
-                        prmStartTime.Value = dr["StartTime"];
+                        prmStartTime.Value = DateTime.Now.ToString("HH:mm:ss");
 
                         SqlParameter prmEndTime = command.Parameters.Add("@EndTime", SqlDbType.DateTime);
-                        prmEndTime.Value = dr["EndTime"];
+                        prmEndTime.Value = DateTime.Now.AddHours(1).ToString("HH:mm:ss");
 
                         command.Parameters.Add(new SqlParameter("@Location", dr["Location"]));
-                        command.Parameters.Add(new SqlParameter("@AdditionalInformation", dr["AdditionalInformation"]));
+                        command.Parameters.Add(new SqlParameter("@AdditionalInformation", String.Empty));
 
                         command.ExecuteNonQuery();
                         conn.Close();
